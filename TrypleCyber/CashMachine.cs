@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TrypleCyber
 {
-    public class CashMachine
+    public class CashMachine : CommonMethod
     {
         private List<int> listmoney = new List<int>();
         public CashMachine()
@@ -12,7 +12,7 @@ namespace TrypleCyber
             listmoney.AddRange(new int[] { 2000, 1000, 500, 200, 100, 50, 25, 10, 5, 1 });
         }
 
-        public List<int> GenerateCash(int amount)
+        public void  GenerateCash(int amount)
         {
             if (amount == 0) throw new Exception("The amount must be greater than 0");
             var moneyList = new List<int>();
@@ -22,8 +22,7 @@ namespace TrypleCyber
                 moneyList.Add(distribution);
                 amount -= distribution;
             }
-            return moneyList;
-
+            ShowResult(moneyList);            
         }
 
     }

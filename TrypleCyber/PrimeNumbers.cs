@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TrypleCyber
 {
-    public class PrimeNumbers
+    public class PrimeNumbers : CommonMethod
     {
         public PrimeNumbers()
         {
@@ -40,8 +40,9 @@ namespace TrypleCyber
 
             }
 
+            ShowResult(listResult);
             return listResult;
 
-        }
+        }       
     }
 }

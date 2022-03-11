@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace TrypleCyber
 {
-    public class RandomValues
+    public class RandomValues : CommonMethod
     {
         private readonly Random random = new Random();
         private readonly List<int> listResult = new List<int>();
@@ -18,11 +18,11 @@ namespace TrypleCyber
                 {
                     listResult.Add(GenerateRamdom());
                 }
+                ShowResult(listResult);
                 return listResult;
             }
             throw new Exception("The number is not in the range of 1 to 20");
-        }
-
+        } 
         private int GenerateRamdom()
         {
             while (true)
